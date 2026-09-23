@@ -2,81 +2,187 @@
 {% load static %}
 
 {% block content %}
+
 <section class="page-head compact">
-  <a class="icon-link" href="{% url 'destinations' %}">
+
+  <a
+    class="icon-link"
+    href="{% url 'destinations' %}"
+  >
+
     {% include 'includes/icon.html' with direction='right' %}
-    <span>كل المحطــــات</span>
+
+    <span>
+      كل المحطــــات
+    </span>
+
   </a>
 
-  <p class="eyebrow">{{ region.label }}</p>
-  <h1>ختم {{ region.name }}</h1>
+
+  <p class="eyebrow">
+    {{ region.label }}
+  </p>
+
+  <h1>
+    ختم {{ region.name }}
+  </h1>
+
 </section>
 
+
 <section class="challenge-layout">
+
   <div class="scene">
+
     <img
       src="{% static region.image %}"
       alt="صورة تحدّي منطقة {{ region.name }}"
     >
-    <p>{{ region.tag }}</p>
+
+    <p>
+      {{ region.tag }}
+    </p>
+
   </div>
 
+
   <div class="panel challenge-panel">
+
     {% if done %}
-      <div class="stamp big" style="--ink: {{ region.color }};">
-        <span>✦</span>
-        <strong>{{ region.name }}</strong>
-        <span>تمّت الزيارة ✓</span>
+
+      <div
+        class="stamp big"
+        style="--ink: {{ region.color }};"
+      >
+
+        <span>
+          ✦ اليوم الوطني ٩٦ ✦
+        </span>
+
+        <strong>
+          {{ region.name }}
+        </strong>
+
+        <span>
+          تمّت الزيارة ✓
+        </span>
+
       </div>
 
-      <h2>تم الختم، يعطيك العافية!</h2>
-      <p>{{ region.fact }}</p>
 
-      <a class="button" href="{% url 'destinations' %}">
-        <span>نروح للمحطــــة اللي بعدها</span>
+      <h2>
+        تم الختم، يعطيك العافية!
+      </h2>
+
+      <p>
+        {{ region.fact }}
+      </p>
+
+
+      <a
+        class="button"
+        href="{% url 'destinations' %}"
+      >
+
+        <span>
+          نروح للمحطــــة اللي بعدها
+        </span>
+
         {% include 'includes/icon.html' %}
+
       </a>
 
-      <a class="text-link" href="{% url 'passport' %}">
+
+      <a
+        class="text-link"
+        href="{% url 'passport' %}"
+      >
         شوف الختم في جــــوازك
       </a>
+
+
     {% else %}
-      <span class="pill">سؤال الختم</span>
-      <h2 id="challenge-question">{{ region.question }}</h2>
+
+      <span class="pill">
+        سؤال الختم
+      </span>
+
+
+      <h2 id="challenge-question">
+        {{ region.question }}
+      </h2>
+
 
       {% if error %}
-        <p class="error" role="alert">{{ error }}</p>
+
+        <p
+          class="error"
+          role="alert"
+        >
+          {{ error }}
+        </p>
+
       {% endif %}
 
+
       <form method="post">
+
         {% csrf_token %}
 
         <fieldset aria-labelledby="challenge-question">
-          <legend class="sr-only">اختر الإجابة الصحيحة</legend>
+
+          <legend class="sr-only">
+            اختر الإجابة الصحيحة
+          </legend>
 
           {% for choice in region.options %}
+
             <label class="choice">
+
               <input
                 type="radio"
                 name="answer"
                 value="{{ choice }}"
                 required
               >
-              <span>{{ choice }}</span>
+
+              <span>
+                {{ choice }}
+              </span>
+
             </label>
+
           {% endfor %}
+
         </fieldset>
 
-        <button class="button" type="submit">
+
+        <button
+          class="button"
+          type="submit"
+        >
           ثبّت الختم ✦
         </button>
+
       </form>
 
+
       <details>
-        <summary>أحتاج تلميحًا</summary>
-        <p>{{ region.hint }}</p>
+
+        <summary>
+          أحتاج تلميحًا
+        </summary>
+
+        <p>
+          {{ region.hint }}
+        </p>
+
       </details>
+
     {% endif %}
+
   </div>
+
 </section>
+
 {% endblock %}

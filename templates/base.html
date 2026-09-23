@@ -5,56 +5,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#124b3b">
-    <title>جواز المواطن | تذكار اليوم الوطني</title>
+
+    <title>جواز المواطن | اليوم الوطني السعودي ٩٦</title>
 
     <link
       rel="icon"
       href="{% static 'images/icon.svg' %}"
       type="image/svg+xml"
     >
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script defer src="{% static 'js/app.js' %}"></script>
   </head>
 
   <body>
+
     <header class="nav">
+
       <a class="brand" href="{% url 'home' %}">
         <span class="brand-icon">✦</span>
+
         جــــواز المواطن
-        <small>تذكار ٢٣ سبتمبر</small>
+
+        <small>
+          اليوم الوطني السعودي ٩٦ · ٢٣ سبتمبر
+        </small>
       </a>
 
       <nav aria-label="التنقل الرئيسي">
+
         {% if passport %}
-          <a href="{% url 'destinations' %}">المحطات</a>
+
+          <a href="{% url 'destinations' %}">
+            المحطات
+          </a>
 
           <a href="{% url 'passport' %}">
             جــــوازي
             <span class="badge">{{ count }}/٥</span>
           </a>
+
         {% else %}
+
           <a class="icon-link" href="{% url 'home' %}#start">
             <span>ابدأ الجــــواز</span>
             {% include 'includes/icon.html' %}
           </a>
+
         {% endif %}
+
       </nav>
+
     </header>
 
+
     <main>
+
       {% for message in messages %}
-        <div class="toast" role="status">{{ message }}</div>
+        <div class="toast" role="status">
+          {{ message }}
+        </div>
       {% endfor %}
 
-      {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
+
     </main>
 
+
     <footer>
-      <span>صُنع بحب للوطن ♥ · المهندسة أريج ثلاب</span>
+
       <span>
-        مشروع تفاعلي بسيط لليوم الوطني · جــــواز تذكاري غير رسمي
+        صُنع بحب للوطن ♥ · المهندسة أريج ثلاب
       </span>
-      <span>٥ محطــــات من مناطقنا.</span>
+
+      <span>
+        مشروع تفاعلي لليوم الوطني السعودي ٩٦ ·
+        جــــواز تذكاري غير رسمي
+      </span>
+
+      <span>
+        ٥ محطــــات من مناطقنا.
+      </span>
+
     </footer>
+
   </body>
 </html>
