@@ -227,6 +227,7 @@
                 │                         │
                 ▼                         ▼
        HTML / CSS / JavaScript       PostgreSQL
+```
 
 ## 📂 Project Structure
 
