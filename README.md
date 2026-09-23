@@ -1,4 +1,4 @@
-# 🇸🇦 جواز المواطن | Citizen Passport
+# جواز المواطن | Citizen Passport
 
 <p align="center">
   <strong>تجربة رقمية تفاعلية لليوم الوطني السعودي ٩٦</strong>
@@ -363,7 +363,7 @@ Backend & Web Development
 ---
 
 <p align="center">
-  🇸🇦 <strong>جــــواز المواطن</strong>
+   <strong>جــــواز المواطن</strong>
   <br>
   رحلة رقمية صغيرة لاكتشاف جانب من وطن كبير.
 </p>
