@@ -205,28 +205,28 @@
 ## 🏗️ Architecture
 
 ```text
-User
- │
- ▼
-Browser
- │
- ▼
-Django URLs
- │
- ▼
-Views
- ├───────────────┐
- ▼               ▼
-Templates       Models
- │               │
- ▼               ▼
-HTML/CSS/JS    Database
- │
- ▼
-Interactive Experience
-```
-
----
+                    ┌─────────────────┐
+                    │     Browser     │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   Django URLs   │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │      Views      │
+                    └────────┬────────┘
+                             │
+                ┌────────────┴────────────┐
+                ▼                         ▼
+       ┌─────────────────┐       ┌─────────────────┐
+       │ Django Templates│       │     Models      │
+       └────────┬────────┘       └────────┬────────┘
+                │                         │
+                ▼                         ▼
+       HTML / CSS / JavaScript       PostgreSQL
 
 ## 📂 Project Structure
 
