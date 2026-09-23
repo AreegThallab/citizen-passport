@@ -1,123 +1,126 @@
 # 🇸🇦 جواز المواطن | Citizen Passport
 
 <p align="center">
-  تجربة ويب تفاعلية بمناسبة اليوم الوطني السعودي ٩٦
+  <strong>تجربة رقمية تفاعلية لليوم الوطني السعودي ٩٦</strong>
 </p>
 
 <p align="center">
-  <strong>Explore · Learn · Collect</strong>
+  Explore · Learn · Collect
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-Django-blue">
-  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-orange">
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-informational">
-  <img src="https://img.shields.io/badge/Deployment-Render-success">
+  <img src="https://img.shields.io/badge/Python-Django-0C4B33?style=flat-square">
+  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-444?style=flat-square">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?style=flat-square">
+  <img src="https://img.shields.io/badge/Deploy-Render-46E3B7?style=flat-square">
+  <img src="https://img.shields.io/badge/Status-Active%20Development-brightgreen?style=flat-square">
 </p>
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Experience
 
-**[جرّب جواز المواطن](ضع-رابط-Render-هنا)**
+> سيتم إضافة رابط النسخة المنشورة هنا بعد اكتمال النشر على Render.
 
 ---
 
-## عن المشروع
+## ✦ عن المشروع
 
-**جواز المواطن** هو تجربة رقمية تفاعلية مبنية باستخدام Django، تأخذ المستخدم في رحلة قصيرة عبر عدد من مناطق المملكة العربية السعودية.
+**جواز المواطن** هو مشروع ويب تفاعلي مبني باستخدام **Django**، تم تطويره كتجربة رقمية مرتبطة باليوم الوطني السعودي ٩٦.
 
-بدلًا من تقديم محتوى اليوم الوطني في صفحة تقليدية، يحوّل المشروع التجربة إلى **جواز رقمي تذكاري** يجمع فيه المستخدم أختامًا أثناء مروره على خمس محطات.
+بدلًا من تقديم محتوى المناسبة في صفحة تقليدية، يحوّل المشروع التجربة إلى **رحلة رقمية قصيرة عبر المملكة**.
 
-في كل محطة يتعرف المستخدم على جانب من ثقافة المملكة أو معالمها، ثم يجيب على سؤال بسيط للحصول على ختم جديد.
+يصدر المستخدم جوازه الخاص، ثم ينتقل بين خمس محطــــات مستوحاة من مناطق المملكة وثقافتها ومعالمها. في كل محطة يواجه سؤالًا بسيطًا، وعند الإجابة الصحيحة يحصل على **ختم رقمي** يضاف مباشرة إلى جوازه.
 
-بعد إكمال الرحلة، يستطيع المستخدم إنشاء **بطاقة تذكارية شخصية بصيغة PNG** وتحميلها أو مشاركتها.
+بعد جمع الأختام، يستطيع المستخدم إنشاء **بطاقة تذكارية شخصية بصيغة PNG** تحمل اسمه وإنجازه، ثم تحميلها أو مشاركتها.
 
 > المشروع تجربة تذكارية مستقلة وغير رسمية، ولا يمثل أي جهة حكومية.
 
 ---
 
-## 🎯 الفكرة
+## 🎯 الرؤية
 
-الفكرة مبنية على تحويل التصفح من تجربة مشاهدة فقط إلى تجربة مشاركة.
+الفكرة الأساسية ليست مجرد موقع لليوم الوطني، بل نموذج يمكن تطويره إلى **منصة رحلات رقمية تفاعلية**.
 
-بدلًا من:
+يمكن استخدام نفس المفهوم في:
+
+- الفعاليات الوطنية.
+- السياحة.
+- المتاحف.
+- المعارض.
+- الجامعات.
+- التجارب التعليمية.
+- المسارات الثقافية والتراثية.
+
+الهدف هو تحويل المحتوى من تجربة مشاهدة إلى تجربة مشاركة:
 
 ```text
-فتح صفحة → قراءة محتوى → الخروج
+اكتشف
+   ↓
+تفاعل
+   ↓
+أجب
+   ↓
+اجمع
+   ↓
+أكمل الرحلة
+   ↓
+احتفظ بتذكار رقمي
 ```
-
-تصبح التجربة:
-
-```text
-إصدار الجواز
-      ↓
-اختيار الاسم والرمز
-      ↓
-استكشاف المحطات
-      ↓
-الإجابة على التحديات
-      ↓
-جمع الأختام
-      ↓
-إكمال الجواز
-      ↓
-إنشاء بطاقة تذكارية
-```
-
-الهدف هو الجمع بين:
-
-**الثقافة السعودية + Gamification + Web Development + UX/UI**
 
 ---
 
 # 🧭 تجربة المستخدم
 
-## 01 — إصدار الجواز
+## 01 — إصدار الجــــواز
 
-يبدأ المستخدم بإصدار جوازه الرقمي من الصفحة الرئيسية وإدخال اسمه واختيار رمز شخصي.
+تبدأ التجربة من الصفحة الرئيسية، حيث يتعرف المستخدم على فكرة المشروع ويصدر جوازه الرقمي باستخدام اسمه ورمز يختاره.
 
 ![Citizen Passport Home](docs/screenshots/home.png)
 
 ---
 
-## 02 — استكشاف المحطات
+## 02 — استكشاف المحطــــات
 
-بعد إصدار الجواز تظهر خمس محطات يمكن للمستخدم زيارتها بأي ترتيب، مع عرض تقدمه الحالي وعدد الأختام التي تم جمعها.
+بعد إصدار الجواز تظهر المحطات المتاحة، مع عرض مستوى التقدم وعدد الأختام التي تم جمعها.
 
-![Stations](docs/screenshots/stations.png)
+يمكن للمستخدم زيارة المحطات بالترتيب الذي يفضله.
 
----
-
-## 03 — تحدي المحطة
-
-داخل كل محطة يظهر سؤال مرتبط بأحد المعالم أو العناصر الثقافية السعودية.
-
-يمكن للمستخدم اختيار الإجابة والاستفادة من تلميح عند الحاجة.
-
-![Challenge](docs/screenshots/question.png)
+![Citizen Passport Stations](docs/screenshots/stations.png)
 
 ---
 
-## 04 — جمع الأختام
+## 03 — تحدي المحطــــة
 
-بعد الإجابة الصحيحة يتم تسجيل الزيارة وإضافة ختم المحطة إلى الجواز.
+كل محطة تحتوي على محتوى بصري وسؤال مرتبط بأحد المعالم أو العناصر الثقافية السعودية.
 
-![Digital Passport](docs/screenshots/passport.png)
+يمكن للمستخدم اختيار الإجابة واستخدام تلميح عند الحاجة.
+
+![Citizen Passport Challenge](docs/screenshots/question.png)
+
+---
+
+## 04 — جمع الأختــــام
+
+عند الإجابة الصحيحة يتم تسجيل الزيارة وإضافة ختم المحطة إلى الجواز.
+
+تُحفظ الأختام في قاعدة البيانات، ويمنع النظام تكرار الختم لنفس المحطة.
+
+![Citizen Passport](docs/screenshots/passport.png)
 
 ---
 
 ## 05 — البطاقة التذكارية
 
-بعد إكمال الرحلة يمكن إنشاء بطاقة باسم المستخدم وأختامه.
+بعد إكمال الرحلة يمكن للمستخدم إنشاء بطاقة رقمية شخصية.
 
-يتم رسم البطاقة مباشرة داخل المتصفح باستخدام **JavaScript Canvas API**.
+تُرسم البطاقة مباشرة داخل المتصفح باستخدام **JavaScript Canvas API**، ويمكن تحميلها بصيغة PNG أو مشاركتها من الجهاز.
 
-![Souvenir Card](docs/screenshots/card.png)
+![Citizen Passport Card](docs/screenshots/card.png)
 
 ---
 
-## 📍 المحطات الحالية
+## 📍 المحطــــات الحالية
 
 | المنطقة | التجربة |
 |---|---|
@@ -129,128 +132,98 @@
 
 ---
 
-## ✨ Features
+## ✨ أبرز الخصائص
 
-- واجهة عربية كاملة تدعم RTL.
+- واجهة عربية كاملة تدعم `RTL`.
 - تصميم Responsive للجوال والحاسوب.
-- جواز رقمي باسم المستخدم.
-- رمز شخصي للجواز.
-- خمس محطات تفاعلية.
+- تجربة مستوحاة من الجواز والأختام.
+- إصدار جواز رقمي باسم المستخدم.
+- خمس محطــــات تفاعلية.
 - أسئلة اختيار من متعدد.
 - نظام تلميحات.
-- حفظ الأختام في قاعدة البيانات.
-- منع تكرار الختم للمحطة نفسها.
 - تتبع تقدم المستخدم.
-- Django Sessions لربط المستخدم بجوازه.
-- إنشاء بطاقة PNG مباشرة داخل المتصفح.
+- حفظ الجواز والأختام في قاعدة البيانات.
+- منع تكرار الأختام.
+- استخدام Django Sessions بدون الحاجة إلى تسجيل حساب.
+- إنشاء بطاقة تذكارية PNG داخل المتصفح.
 - دعم Web Share API عند توفرها.
 - إمكانية حذف الجواز والبدء من جديد.
-- لا يحتاج إلى إنشاء حساب أو كلمة مرور.
+- عدم طلب بيانات شخصية حساسة.
 
 ---
 
 ## ⚙️ Technical Highlights
 
-من أبرز الجوانب التقنية في المشروع:
-
 ### Django Sessions
 
-يتم استخدام جلسة المتصفح لربط المستخدم بالجواز الخاص به بدون الحاجة إلى تسجيل حساب تقليدي.
+يعتمد المشروع على **Django Sessions** لربط المستخدم بالجواز الخاص به دون الحاجة إلى نظام تسجيل حسابات تقليدي.
 
 ### Database Persistence
 
-يتم حفظ الجوازات والأختام في قاعدة البيانات بدل الاعتماد فقط على Local Storage أو بيانات المتصفح.
-
-### Duplicate Prevention
-
-يمنع Backend المستخدم من الحصول على الختم نفسه أكثر من مرة.
+يتم حفظ بيانات الجواز والأختام في قاعدة البيانات، وليس فقط داخل المتصفح.
 
 ### Dynamic Templates
 
-تعتمد صفحات المشروع على Django Templates لعرض حالة المستخدم، الأختام، المحطات والتقدم بشكل ديناميكي.
+يتم استخدام Django Templates لعرض حالة المحطات والأختام والتقدم بشكل ديناميكي حسب كل مستخدم.
 
-### PNG Generation
+### Duplicate Stamp Prevention
 
-تُنشأ البطاقة التذكارية داخل المتصفح باستخدام:
+يتحقق الـ Backend من عدم حصول المستخدم على ختم المحطة نفسها أكثر من مرة.
 
-```text
-JavaScript Canvas API
-```
+### Canvas-generated Card
 
-### Production Deployment
+تُنشأ البطاقة النهائية بالكامل داخل المتصفح باستخدام **Canvas API**، دون الحاجة إلى خدمة خارجية لتوليد الصور.
 
-المشروع مجهز للنشر باستخدام:
+### Production-ready Configuration
 
-```text
-Gunicorn
-WhiteNoise
-PostgreSQL
-Render
-```
+تم تجهيز المشروع لبيئة Production باستخدام:
+
+- PostgreSQL
+- Gunicorn
+- WhiteNoise
+- Environment Variables
+- Render
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Backend
-
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Django](https://img.shields.io/badge/Django-Web_Framework-darkgreen)
-
-- Python
-- Django
-
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-- Canvas API
-
-### Database
-
-- SQLite — Local Development
-- PostgreSQL — Production
-
-### Deployment
-
-- Render
-- Gunicorn
-- WhiteNoise
-
-### Design
-
-- RTL Layout
-- Responsive Design
-- Thmanyah Font
+| Layer | Technologies |
+|---|---|
+| Backend | Python, Django |
+| Frontend | HTML5, CSS3, JavaScript |
+| Database | SQLite / PostgreSQL |
+| Image Generation | JavaScript Canvas API |
+| Sessions | Django Sessions |
+| Static Files | WhiteNoise |
+| Production Server | Gunicorn |
+| Deployment | Render |
+| Design | RTL, Responsive Design, Thmanyah Sans |
 
 ---
 
 ## 🏗️ Architecture
 
 ```text
-                    ┌─────────────────┐
-                    │     Browser     │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │   Django URLs   │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │      Views      │
-                    └────────┬────────┘
-                             │
-                ┌────────────┴────────────┐
-                ▼                         ▼
-       ┌─────────────────┐       ┌─────────────────┐
-       │ Django Templates│       │     Models      │
-       └────────┬────────┘       └────────┬────────┘
-                │                         │
-                ▼                         ▼
-       HTML / CSS / JavaScript       PostgreSQL
+User
+ │
+ ▼
+Browser
+ │
+ ▼
+Django URLs
+ │
+ ▼
+Views
+ ├───────────────┐
+ ▼               ▼
+Templates       Models
+ │               │
+ ▼               ▼
+HTML/CSS/JS    Database
+ │
+ ▼
+Interactive Experience
 ```
 
 ---
@@ -273,7 +246,6 @@ citizen-passport/
 │   └── tests.py
 │
 ├── templates/
-│
 ├── static/
 │   ├── css/
 │   ├── js/
@@ -291,63 +263,58 @@ citizen-passport/
 
 ---
 
-## 🚀 Future Development
+## 🚀 Project Status
 
-النسخة الحالية تمثل **MVP** للفكرة، ويمكن تطويرها مستقبلًا لتصبح منصة رحلات رقمية أكبر.
+**Status: Active Development**
 
-من التطويرات الممكنة:
+النسخة الحالية تمثل **MVP مكتمل الوظائف الأساسية** للمشروع، مع استمرار العمل على تحسين التجربة وتطوير الفكرة مستقبلًا.
+
+من التطويرات المقترحة:
 
 - إضافة جميع مناطق المملكة.
-- إضافة أكثر من مسار للمستخدم.
-- مسار للتراث.
+- إنشاء أكثر من مسار للرحلة.
+- مسار للتراث والثقافة.
 - مسار للسياحة.
 - مسار للأكلات الشعبية.
 - مسار للمعالم التاريخية.
-- إضافة نظام نقاط وإنجازات.
-- Leaderboard.
-- QR Codes للحصول على الأختام في الفعاليات.
-- Location-based stamps.
+- إضافة Achievements ونظام نقاط.
+- إضافة Leaderboard.
+- الحصول على الأختام باستخدام QR Codes في الفعاليات.
+- إضافة أختام مرتبطة بالموقع الجغرافي.
+- إدارة المحطات والمحتوى من Django Admin.
 - دعم لغات متعددة.
-- إدارة المحطات من Django Admin.
-- حسابات مستخدمين اختيارية.
-- مشاركة الإنجازات اجتماعيًا.
-- Progressive Web App.
-- تطبيق Mobile مستقبلًا.
-
-كما يمكن إعادة استخدام نفس الفكرة خارج اليوم الوطني في:
-
-**السياحة، المتاحف، المعارض، الجامعات، الفعاليات والتجارب التعليمية.**
+- إضافة مشاركة اجتماعية أكثر تطورًا.
+- تحويل المشروع إلى Progressive Web App.
+- تطوير نسخة Mobile مستقبلًا.
 
 ---
 
-## 🔐 Privacy
+## 🔐 Privacy by Design
 
-لا يتطلب المشروع:
+تم تصميم التجربة بحيث لا تحتاج إلى:
 
 - بريد إلكتروني.
 - رقم جوال.
 - كلمة مرور.
-- بيانات شخصية حساسة.
+- حساب مستخدم.
+- معلومات شخصية حساسة.
 
-يعتمد فقط على اسم المستخدم والرمز الذي يختاره، مع استخدام Django Session لحفظ رحلته.
+يتم استخدام الاسم والرمز المختار فقط لإنشاء التجربة، مع ربط الجواز بجلسة المتصفح.
 
 ---
 
-## 💻 Local Setup
+## 💻 Local Development
 
 ### Windows
 
 ```powershell
 py -m venv .venv
-
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-
 .\.venv\Scripts\python.exe manage.py migrate
-
 .\.venv\Scripts\python.exe manage.py runserver
 ```
 
-ثم:
+ثم افتح:
 
 ```text
 http://127.0.0.1:8000/
@@ -357,11 +324,8 @@ http://127.0.0.1:8000/
 
 ```bash
 python3 -m venv .venv
-
 .venv/bin/python -m pip install -r requirements.txt
-
 .venv/bin/python manage.py migrate
-
 .venv/bin/python manage.py runserver
 ```
 
@@ -369,7 +333,7 @@ python3 -m venv .venv
 
 ## 🧪 Tests
 
-```powershell
+```bash
 python manage.py test
 ```
 
@@ -377,50 +341,29 @@ python manage.py test
 
 ## 🌐 Deployment
 
-المشروع مجهز للنشر على Render.
+المشروع معدّ للنشر على **Render** باستخدام PostgreSQL وGunicorn وWhiteNoise.
 
-### Build Command
-
-```bash
+```text
+Build Command:
 ./build.sh
-```
 
-### Start Command
-
-```bash
+Start Command:
 gunicorn config.wsgi:application
 ```
 
-ويتم استخدام PostgreSQL في بيئة الإنتاج.
-
 ---
 
-## 🔒 Git Ignore
-
-الملفات التالية لا يتم رفعها إلى GitHub:
-
-```text
-.venv/
-__pycache__/
-*.pyc
-db.sqlite3
-.local-secret
-staticfiles/
-.env
-```
-
----
-
-## 👩🏻‍💻 Developed By
+## 👩🏻‍💻 Developed by
 
 **Areeg Thallab**
 
-Software Engineering Student  
+Software Engineering  
 Backend & Web Development
 
 ---
 
 <p align="center">
-  🇸🇦 <strong>جواز المواطن</strong><br>
+  🇸🇦 <strong>جــــواز المواطن</strong>
+  <br>
   رحلة رقمية صغيرة لاكتشاف جانب من وطن كبير.
 </p>
