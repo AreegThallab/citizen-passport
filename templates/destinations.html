@@ -1,0 +1,67 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">المحطّــــات / اختر أول ختم</p>
+  <h1>جاهز يا {{ passport.name }}؟</h1>
+  <p>
+    كل محطــــة سؤال سريع. إذا جاوبت صح،
+    ينضاف الختم مباشرة في الجــــواز.
+  </p>
+
+  <div class="progress-row">
+    <span>{{ count }} من ٥ أختام</span>
+    <progress value="{{ count }}" max="5">{{ percent }}%</progress>
+
+    <a class="icon-link" href="{% url 'passport' %}">
+      <span>افتح جــــوازك</span>
+      {% include 'includes/icon.html' %}
+    </a>
+  </div>
+</section>
+
+<section class="cards">
+  {% for r in regions %}
+    <a class="region-card" href="{% url 'challenge' r.slug %}">
+      <div class="card-art">
+        <img
+          src="{% static r.image %}"
+          alt="صورة محطة {{ r.name }}"
+        >
+
+        {% if r.earned %}
+          <span class="earned-label">✓ جُمِع الختم</span>
+        {% else %}
+          <span class="number">0{{ forloop.counter }}</span>
+        {% endif %}
+      </div>
+
+      <div class="card-body">
+        <small>{{ r.label }}</small>
+
+        <h2 class="region-title">
+          {{ r.name }}
+
+          <span class="region-arrow" aria-hidden="true">
+            {% include 'includes/icon.html' %}
+          </span>
+        </h2>
+
+        <p>{{ r.tag }}</p>
+      </div>
+    </a>
+  {% endfor %}
+
+  <div class="last-card">
+    <span>✦</span>
+    <h2>خمس محطــــات.<br>وختم يثبت مرورك.</h2>
+    <p>اجمعها كلها وحمّل بطاقة التذكار.</p>
+
+    <a class="icon-link" href="{% url 'passport' %}">
+      <span>شوف الأختام</span>
+      {% include 'includes/icon.html' %}
+    </a>
+  </div>
+</section>
+{% endblock %}

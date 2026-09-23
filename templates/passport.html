@@ -1,0 +1,99 @@
+﻿{% extends 'base.html' %}
+
+{% block content %}
+<section class="page-head compact">
+  <p class="eyebrow">بطاقتك التذكارية</p>
+  <h1>هنا تظهر أختامك.</h1>
+
+  <p>
+    {% if count == 5 %}
+      <span aria-label="اكتملت الرحلة">
+        مبروك! اكتملت الرحلة،
+        وكل الأختام صارت في جــــوازك.
+      </span>
+    {% else %}
+      كل ختم يقرّبك من البطاقة الكاملة.
+      باقي لك محطــــات تستحق الزيارة.
+    {% endif %}
+  </p>
+</section>
+
+<section class="passport-book">
+  <div class="identity">
+    <span class="eyebrow">
+      CITIZEN PASSPORT / تذكار اليوم الوطني
+    </span>
+
+    <div class="avatar">{{ avatar }}</div>
+    <small>اسم المسافر</small>
+    <h2>{{ passport.name }}</h2>
+    <p>الوجهة: محطــــات المملكة</p>
+    <p>تاريخ الإصدار: {{ passport.created_at|date:'Y/m/d' }}</p>
+    <strong>{{ count }} / ٥ أختام</strong>
+    <p class="muted">تجربة تفاعلية تذكارية غير رسمية</p>
+  </div>
+
+  <div class="stamp-grid">
+    {% for r in regions %}
+      <a
+        href="{% url 'challenge' r.slug %}"
+        class="stamp{% if not r.earned %} empty{% endif %}"
+        style="--ink: {{ r.color }};"
+      >
+        <span>✦ ختم اليوم الوطني ✦</span>
+        <strong>{{ r.name }}</strong>
+
+        <small>
+          {% if r.earned %}
+            تمّت الزيارة ✓
+          {% else %}
+            بانتظار مرورك
+          {% endif %}
+        </small>
+      </a>
+    {% endfor %}
+
+    <div class="stamp closing">
+      <strong>ذكرى باسمك</strong>
+      <small>وتبقى في الجــــواز ♡</small>
+    </div>
+  </div>
+</section>
+
+<section class="actions">
+  <button
+    class="button"
+    id="download-card"
+    data-name="{{ passport.name }}"
+    data-count="{{ count }}"
+    type="button"
+  >
+    <span>حمّل بطاقة التذكار</span>
+    {% include 'includes/icon.html' with icon='download' %}
+  </button>
+
+  <button class="secondary icon-link" id="share-card" type="button">
+    <span>شارك البطاقة</span>
+    {% include 'includes/icon.html' with icon='share' %}
+  </button>
+
+  <a class="icon-link" href="{% url 'destinations' %}">
+    <span>كمّل المحطــــات</span>
+    {% include 'includes/icon.html' %}
+  </a>
+
+  <p id="share-status" role="status"></p>
+</section>
+
+<details class="reset-area">
+  <summary>إدارة جــــوازي</summary>
+  <p>هذا الخيار يحذف جــــوازك وأختامك نهائيًا ويبدأ جــــواز جديد.</p>
+
+  <form method="post" action="{% url 'reset' %}" id="reset-form">
+    {% csrf_token %}
+    <button class="secondary" type="submit">
+      حذف جــــوازي والبدء من جديد
+    </button>
+  </form>
+</details>
+{% endblock %}

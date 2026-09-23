@@ -1,0 +1,103 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">فعالية ٢٣ سبتمبر / تذكار رقمي</p>
+
+    <h1>
+      جــــواز صغير.<br>
+      وذكرى <em>من كل منطقة.</em>
+    </h1>
+
+    <p class="lead">
+      اكتب اسمك، اختر رمزك، ومرّ على خمس محطــــات.
+      كل إجابة صحيحة تضيف ختمًا جديدًا لجــــوازك.
+    </p>
+
+    <a
+      class="button"
+      href="{% if passport %}{% url 'destinations' %}{% else %}#start{% endif %}"
+    >
+      <span>
+        {% if passport %}
+          كمّل المحطــــات
+        {% else %}
+          طلّع جــــوازك
+        {% endif %}
+      </span>
+      {% include 'includes/icon.html' %}
+    </a>
+
+    <div class="hero-meta">
+      <span>٠٥ محطــــات</span>
+      <span>٠٥ أختام</span>
+      <span>تذكار باسمك</span>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="orbit">تذكار صغير، ذكرى كبيرة</div>
+
+    <div class="cover">
+      <div class="cover-line">
+        <span>تذكار وطــــن</span>
+        <span>SAUDI ARABIA</span>
+      </div>
+
+      <img
+        src="{% static 'images/emblem.svg' %}"
+        alt="نخلة زخرفية"
+      >
+
+      <h2>جــــواز المواطن</h2>
+      <p>CITIZEN PASSPORT</p>
+
+      <div class="cover-bottom">
+        تذكار اليوم الوطني<br>
+        ✦ 23 SEPTEMBER ✦
+      </div>
+    </div>
+
+    <span class="ticket">
+      صالــــح للتجربة<br>
+      <b>بدون تذكرة ولا تسجيل ♡</b>
+    </span>
+  </div>
+</section>
+
+<div class="ribbon">
+  خمس وقفــــات خفيفة من مناطق المملكة…
+  <b>وختم لكل إجابة صحيحة.</b>
+</div>
+
+<section id="start" class="start-section">
+  <div>
+    <p class="eyebrow">خطوتك الأولى</p>
+    <h2>ابدأ باسمك.</h2>
+    <p>الجــــواز لك، والأختام تنتظرك في المحطــــات.</p>
+  </div>
+
+  {% if passport %}
+    <div class="panel">
+      <h3>حيّاك من جديد، {{ passport.name }} {{ avatar }}</h3>
+
+      <a class="button" href="{% url 'destinations' %}">
+        <span>العودة للمحطــــات</span>
+        {% include 'includes/icon.html' %}
+      </a>
+    </div>
+  {% else %}
+    <form method="post" class="panel">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button class="button" type="submit">
+        <span>أصدر جــــوازي وابدأ</span>
+        {% include 'includes/icon.html' %}
+      </button>
+    </form>
+  {% endif %}
+</section>
+{% endblock %}
